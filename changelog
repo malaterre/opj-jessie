@@ -1,16 +1,17 @@
-openjpeg2 (2.1.0-2+deb8u3) UNRELEASED; urgency=medium
+openjpeg2 (2.1.0-2+deb8u3) jessie-security; urgency=medium
 
   * CVE-2016-9118: c22cbd8bdf8ff2ae372f94391a4be2d322b36b41.patch
   * CVE-2016-5152: 3fbe71369019df0b47c7a2be4fab8c05768f2f32.patch
   * CVE-2016-1628: 11445eddad7e7fa5b273d1c83c91011c44e5d586.patch
-  # CVE-2016-10504: 397f62c0a838e15d667ef50e27d5d011d2c79c04.patch
+  * CVE-2016-10504: not needed
   * CVE-2017-14039: CVE-2017-14039.patch
   * CVE-2017-14040: 2cd30c2b06ce332dede81cccad8b334cde997281.patch
   * CVE-2017-14041: e5285319229a5d77bf316bb0d3a6cbd3cb8666d9.patch
-  # CVE-2017-14151: afb308b9ccbe129608c9205cf3bb39bbefad90b9.patch
+  * CVE-2017-14151: not needed
   * CVE-2017-14152: dcac91b8c72f743bda7dbfa9032356bc8110098a.patch
+  * CVE-2016-5157: CVE-2016-5157.patch
 
- -- Mathieu Malaterre <malat@debian.org>  Mon, 23 Oct 2017 18:34:34 +0200
+ -- Mathieu Malaterre <malat@debian.org>  Mon, 23 Oct 2017 20:43:14 +0200
 
 openjpeg2 (2.1.0-2+deb8u2) jessie-security; urgency=medium
 
