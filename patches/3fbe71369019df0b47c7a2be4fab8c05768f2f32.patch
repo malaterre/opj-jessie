@@ -20,7 +20,7 @@ Fix derived from https://pdfium.googlesource.com/pdfium.git/+/d8cc503575463ff3d8
  
  /** @defgroup J2K J2K - JPEG-2000 codestream reader/writer */
  /*@{*/
-@@ -7691,6 +7692,9 @@
+@@ -8097,6 +8098,9 @@
          *p_tile_index = p_j2k->m_current_tile_number;
          *p_go_on = OPJ_TRUE;
          *p_data_size = opj_tcd_get_decoded_tile_size(p_j2k->m_tcd);
@@ -40,7 +40,7 @@ Fix derived from https://pdfium.googlesource.com/pdfium.git/+/d8cc503575463ff3d8
  
  /* ----------------------------------------------------------------------- */
  
-@@ -1079,6 +1080,7 @@
+@@ -1154,6 +1155,7 @@
          opj_tcd_tilecomp_t * l_tile_comp = 00;
          opj_tcd_resolution_t * l_res = 00;
          OPJ_UINT32 l_size_comp, l_remaining;
@@ -48,7 +48,7 @@ Fix derived from https://pdfium.googlesource.com/pdfium.git/+/d8cc503575463ff3d8
  
          l_tile_comp = p_tcd->tcd_image->tiles->comps;
          l_img_comp = p_tcd->image->comps;
-@@ -1096,7 +1098,17 @@
+@@ -1171,7 +1173,17 @@
                  }
  
                  l_res = l_tile_comp->resolutions + l_tile_comp->minimum_num_resolutions - 1;
@@ -67,7 +67,7 @@ Fix derived from https://pdfium.googlesource.com/pdfium.git/+/d8cc503575463ff3d8
                  ++l_img_comp;
                  ++l_tile_comp;
          }
-@@ -1286,7 +1298,7 @@
+@@ -1366,7 +1378,7 @@
          OPJ_UINT32 l_stride, l_width,l_height;
  
          l_data_size = opj_tcd_get_decoded_tile_size(p_tcd);

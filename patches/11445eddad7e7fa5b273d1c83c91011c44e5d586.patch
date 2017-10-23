@@ -12,7 +12,7 @@ This has been recently fixed in a less elegant way per
 
 --- a/src/lib/openjp2/pi.c
 +++ b/src/lib/openjp2/pi.c
-@@ -1016,7 +1016,8 @@
+@@ -1019,7 +1019,8 @@
  		l_current_pi->poc.precno0 = 0;
  		l_current_pi->poc.resno1 = l_current_poc->resno1; /* Resolution Level Index #0 (End) */
  		l_current_pi->poc.compno1 = l_current_poc->compno1; /* Component Index #0 (End) */
