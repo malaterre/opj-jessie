@@ -10,8 +10,6 @@ Subject: [PATCH] Avoid heap buffer overflow in function pnmtoimage of
  src/lib/openjp2/image.c |  8 +++++++-
  2 files changed, 17 insertions(+), 1 deletion(-)
 
-diff --git a/src/bin/jp2/convert.c b/src/bin/jp2/convert.c
-index b3eb85816..492911c90 100644
 --- a/src/bin/jp2/convert.c
 +++ b/src/bin/jp2/convert.c
 @@ -41,6 +41,7 @@
@@ -20,9 +18,9 @@ index b3eb85816..492911c90 100644
  #include <ctype.h>
 +#include <limits.h>
  
- #include "openjpeg.h"
- #include "convert.h"
-@@ -1573,6 +1574,15 @@
+ #ifdef OPJ_HAVE_LIBTIFF
+ #include <tiffio.h>
+@@ -1782,6 +1783,15 @@
  
      if(!header_info.ok) { fclose(fp); return NULL; }
  
@@ -38,11 +36,9 @@ index b3eb85816..492911c90 100644
      format = header_info.format;
  
      switch(format)
-diff --git a/src/lib/openjp2/image.c b/src/lib/openjp2/image.c
-index e62b416ca..d00a23701 100644
 --- a/src/lib/openjp2/image.c
 +++ b/src/lib/openjp2/image.c
-@@ -64,7 +64,13 @@
+@@ -63,7 +63,13 @@
  			comp->prec = cmptparms[compno].prec;
  			comp->bpp = cmptparms[compno].bpp;
  			comp->sgnd = cmptparms[compno].sgnd;
@@ -55,5 +51,5 @@ index e62b416ca..d00a23701 100644
 +      comp->data = (OPJ_INT32*) opj_calloc((OPJ_SIZE_T)comp->w * comp->h,
 +                                                 sizeof(OPJ_INT32));
  			if(!comp->data) {
- 				/* TODO replace with event manager, breaks API */
- 				/* fprintf(stderr,"Unable to allocate memory for image.\n"); */
+ 				fprintf(stderr,"Unable to allocate memory for image.\n");
+ 				opj_image_destroy(image);
