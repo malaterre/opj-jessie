@@ -1,0 +1,9 @@
+fix_typos.patch
+multiarch_path.patch
+CVE-2015-6581.patch
+CVE-2015-8871.patch
+CVE-2016-1924.patch
+CVE-2016-7163.patch
+CVE-2016-5159.patch
+CVE-2016-8332.patch
+CVE-2016-9572_CVE-2016-9573.patch

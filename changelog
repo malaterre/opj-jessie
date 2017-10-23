@@ -1,0 +1,36 @@
+openjpeg2 (2.1.0-2+deb8u2) jessie-security; urgency=medium
+
+  * CVE-2016-5159 CVE-2016-8332 CVE-2016-9572 CVE-2016-9573
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Sat, 14 Jan 2017 18:50:54 +0100
+
+openjpeg2 (2.1.0-2+deb8u1) jessie-security; urgency=medium
+
+  * CVE-2015-6581 CVE-2015-8871 CVE-2016-1924 CVE-2016-7163
+
+ -- Moritz Mühlenhoff <jmm@debian.org>  Fri, 09 Sep 2016 20:14:50 +0200
+
+openjpeg2 (2.1.0-2) unstable; urgency=low
+
+  * Install *.pc files. Closes: #762251
+  * Remove cmake-fatal-error export stuff
+  * Fix warnings in d/copyright
+  * Bump Std-Vers to 3.9.6, no changes needed
+  * Fix include path in export file to handle multi-arch install
+    + debian/patches/multiarch_path.patch
+
+ -- Mathieu Malaterre <malat@debian.org>  Tue, 07 Oct 2014 13:14:43 +0200
+
+openjpeg2 (2.1.0-1) unstable; urgency=low
+
+  * New upstream. Closes: #761154, #761155
+  * Rename binary packages to prevent conflicts. Closes: #760874
+  * Remove "Multi-Arch: same" for -dev package. Closes: #760421
+
+ -- Mathieu Malaterre <malat@debian.org>  Thu, 11 Sep 2014 17:40:46 +0200
+
+openjpeg2 (2.0.0-1) unstable; urgency=low
+
+  * New upstream. Closes: #738655.
+
+ -- Mathieu Malaterre <malat@debian.org>  Fri, 23 May 2014 18:23:37 +0200
